@@ -39,7 +39,7 @@
       <h1 class="text-center">Data Peminjam</h1>
 
       <div class="from-cari" style="margin-left: 90px">
-        <form action="{{ url('cari') }}" method="post">
+        <form action="{{ url('/data_peminjam/cari') }}" method="get">
           <label for="nama">Masukkan Nama</label>
             <input type="text" name="cari">
             <button class="btn btn-success" name="cari">Cari</button>

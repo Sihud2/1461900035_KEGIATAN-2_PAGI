@@ -23,20 +23,19 @@
         <table class="table">
             <thead>
             <tr>
-                <th scope="col">No</th>
+                {{-- <th scope="col">No</th> --}}
                 <th scope="col">Nama</th>
                 <th scope="col">Jurusan</th>
                 {{-- <th scope="col">Pengarang</th> --}}
             </tr>
             </thead>
             <tbody>
-                @foreach ( $users as $pengunjung)
+              @foreach ($users as $pengunjung)
                 <tr>
-                    <th scope="row">{{ $loop->iteration }}</th>
-                    <td>{{ $pengunjung->name }}</td>
-                    <td>{{ $pengunjung->jurusan }}</td>
+                    <td> {{$pengunjung->name}} </td>
+                    <td> {{$pengunjung->jurusan}} </td>
                 </tr>
-                @endforeach
+              @endforeach
             </tbody>
         </table>
     </div>

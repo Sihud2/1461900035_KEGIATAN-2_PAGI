@@ -51,7 +51,7 @@ class PagesPerpustakaan extends Controller
         $cari = $request->cari;
         $users = DB::table('users')
         ->where('name', 'like', "%".$cari."%")
-        ->all();
+        ->paginate();
 
         return view('perpustakaan.cari', ['users'=>$users]);
     }
